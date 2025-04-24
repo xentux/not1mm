@@ -555,7 +555,7 @@ def populate_history_info_line(self):
     result = self.database.fetch_call_history(self.callsign.text())
     if result:
         self.history_info.setText(
-            f"{result.get('Call', '')}, {result.get('Name', '')}, {result.get('Exch1', '')}, {result.get('UserText','...')}"
+            f"{result.get('Call', '')}, {result.get('Sect', '')}, {result.get('UserText','...')}"
         )
     else:
         self.history_info.setText("")
@@ -568,6 +568,8 @@ def check_call_history(self):
         self.history_info.setText(f"{result.get('UserText','')}")
         if self.other_1.text() == "":
             self.other_1.setText(f"{result.get('Exch1', '')}")
+        if self.other_2.text() == "":
+            self.other_2.setText(f"{result.get('Sect', '')}")
 
 
 def get_mults(self):
