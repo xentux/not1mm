@@ -24,6 +24,8 @@
 #   Upload logs at: https://dxhf2.darc.de/~accwlog/upload.cgi?form=referat&lang=de
 #   Status of the rules: September 2025
 #   Cabrillo name:	ACCW
+#
+#   You may get history files for this contest here: https://github.com/xentux/not1mm_history
 
 import datetime
 import logging
